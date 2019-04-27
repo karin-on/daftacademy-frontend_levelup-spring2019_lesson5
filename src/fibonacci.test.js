@@ -44,6 +44,6 @@ test('fib throws an error when num equals 0', () => {
     expect(() => { fib(0) }).toThrow("A 'num' parameter is not a positive integer. Please provide a proper parameter.");
 });
 
-test('fib throws an error when num is not a number', () => {
-    expect(() => { fib('string', 2, 3) }).toThrow();
+test('fib throws an error when num is NaN', () => {
+    expect(() => { fib(NaN, 2, 3) }).toThrow();
 });
