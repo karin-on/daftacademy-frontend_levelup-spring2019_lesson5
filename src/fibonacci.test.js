@@ -47,3 +47,7 @@ test('fib throws an error when num equals 0', () => {
 test('fib throws an error when num is NaN', () => {
     expect(() => { fib(NaN, 2, 3) }).toThrow();
 });
+
+test('fib throws an error when num is Infinity', () => {
+    expect(() => { fib(Infinity) }).toThrow();
+});
