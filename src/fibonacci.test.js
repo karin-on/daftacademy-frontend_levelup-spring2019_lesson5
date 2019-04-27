@@ -37,17 +37,17 @@ test('args: 3, "str" and {} give [0, 1, 1]', () => {
 
 // 4) rzucanie błędem
 test('fib throws an error when num equals -1', () => {
-    expect(() => { fib(-1) }).toThrow();
+    expect(() => fib(-1)).toThrow();
 });
 
 test('fib throws an error when num equals 0', () => {
-    expect(() => { fib(0) }).toThrow("A 'num' parameter is not a positive integer. Please provide a proper parameter.");
+    expect(() => fib(0)).toThrow("A 'num' parameter is not a positive integer. Please provide a proper parameter.");
 });
 
 test('fib throws an error when num is NaN', () => {
-    expect(() => { fib(NaN, 2, 3) }).toThrow();
+    expect(() => fib(NaN, 2, 3)).toThrow();
 });
 
 test('fib throws an error when num is Infinity', () => {
-    expect(() => { fib(Infinity) }).toThrow();
+    expect(() => fib(Infinity)).toThrow();
 });
