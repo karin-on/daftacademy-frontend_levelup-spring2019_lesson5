@@ -1,0 +1,14 @@
+{
+  "name": "daftacademy-frontend_levelup-spring2019_lesson5",
+  "version": "1.0.0",
+  "description": "",
+  "main": "./src/fibonacci.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "jest": "^24.7.1"
+  }
+}
