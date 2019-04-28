@@ -13,7 +13,13 @@ test('fib is a function', () => {
 });
 
 
-// 3) zwracane wartości
+// 3) czy funkcja zwraca tablicę
+test('fib returns an array', () => {
+    expect(Array.isArray(fib(5))).toBeTruthy();
+});
+
+
+// 4) zwracane wartości
 test('num equal to 1 gives [0]', () => {
     expect(fib(1)).toEqual([0]);
 });
@@ -35,13 +41,17 @@ test('args: 3, "str" and {} give [0, 1, 1]', () => {
 });
 
 
-// 4) rzucanie błędem
+// 5) rzucanie błędem
 test('fib throws an error when num equals -1', () => {
     expect(() => fib(-1)).toThrow();
 });
 
 test('fib throws an error when num equals 0', () => {
     expect(() => fib(0)).toThrow("A 'num' parameter is not a positive integer. Please provide a proper parameter.");
+});
+
+test('fib throws an error when num equals 10.9854', () => {
+    expect(() => fib(10.9854)).toThrow("A 'num' parameter is not a positive integer. Please provide a proper parameter.");
 });
 
 test('fib throws an error when num is NaN', () => {
