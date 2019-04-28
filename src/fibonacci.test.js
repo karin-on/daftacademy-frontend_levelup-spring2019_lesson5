@@ -50,16 +50,16 @@ test('args: 3, "str" and {} give [0, 1, 1]', () => {
 
 
 // 5) rzucanie błędem
+test.each`
+    num         | expected
+    ${0}        | ${"A 'num' parameter is not a positive integer. Please provide a proper parameter."}
+    ${10.9854}  | ${"A 'num' parameter is not a positive integer. Please provide a proper parameter."}
+`('fib throws an error when num equals $num', ({num, expected}) => {
+    expect(() => fib(num)).toThrow(expected);
+});
+
 test('fib throws an error when num equals -1', () => {
     expect(() => fib(-1)).toThrow();
-});
-
-test('fib throws an error when num equals 0', () => {
-    expect(() => fib(0)).toThrow("A 'num' parameter is not a positive integer. Please provide a proper parameter.");
-});
-
-test('fib throws an error when num equals 10.9854', () => {
-    expect(() => fib(10.9854)).toThrow("A 'num' parameter is not a positive integer. Please provide a proper parameter.");
 });
 
 test('fib throws an error when num is NaN', () => {
