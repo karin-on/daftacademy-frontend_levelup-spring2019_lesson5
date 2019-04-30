@@ -1,13 +1,13 @@
 const fib = require('./fibonacci');
 
 
-// 1) czy istnieje
+// 1) czy fib istnieje
 test('fib exists', () => {
     expect(fib).toBeDefined();
 });
 
 
-// 2) czy jest funkcją
+// 2) czy fib jest funkcją
 test('fib is a function', () => {
     expect(typeof fib).toEqual('function');
 });
@@ -34,19 +34,6 @@ test.each`
 test('args: 3, "str" and {} give [0, 1, 1]', () => {
     expect(fib(3, "str", {})).toEqual([0, 1, 1]);
 });
-
-
-// test.each`
-//     num   |   args   | expected
-//     ${1}  |  ${[]}   | ${[0]}
-//     ${2}  |  ${[]}   | ${[0, 1]}
-//     ${4}  |  ${[]}   | ${[0, 1, 1, 2]}
-//     ${10} |  ${[]}   | ${[0, 1, 1, 2, 3, 5, 8, 13, 21, 34]}
-//     ${3}  | ${['str', {}]} | ${[0, 1, 1]}
-// `('params: $num and $args give(s) $expected', ({num, args, expected}) => {
-//     expect(fib(num, ...args)).toEqual(expected);
-// });
-
 
 
 // 5) rzucanie błędem
